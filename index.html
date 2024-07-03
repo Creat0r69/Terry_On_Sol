@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>$Terry</title>
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+            href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+          integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <!-- font-family: 'Exo 2', sans-serif; -->
+
+    <!-- css -->
+    <link rel="stylesheet" href="./src/vendor/fancyapps/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="./src/vendor/animate.min.css">
+    <link rel="stylesheet" href="./src/main.min.css">
+</head>
+
+<body>
+
+<div id="app">
+
+    <header class="header">
+
+        <section class="c-topbar">
+
+            <a class="branb" href="./index.html">
+                <img style="margin-right: 100px;" src="./images/logo.png" alt="logo">
+            </a> <!-- / branb -->
+
+            <a href="https://t.me/+ZkE5MGeA0So2MzEx" class="btn btn-img"><img src="images/telegram.png"></a>
+            <a href="https://x.com/Terry_On_Sol" class="btn btn-img"><img src="images/twitter.png"></a>
+        </section>
+        <div class="btn-group">
+            <a href="#" class="btn btn-img">
+                <img class="statu-1" src="./images/logo.png">
+                <img class="statu-2" src="./images/logo2.png">
+            </a>
+            <a href="https://t.me/+ZkE5MGeA0So2MzEx" class="btn btn-img"><img src="images/telegram.png"></a>
+            <a href="https://x.com/Terry_On_Sol" class="btn btn-img"><img src="images/twitter.png"></a>
+        </div>
+    </header>
+    <!-- header end -->
+
+    <main class="main">
+
+        <section style="margin-top: 20px " class="section c-section-1">
+
+            <div class="wrap-content">
+                <div class="content">
+                    <div style="display: flex;justify-content: center;align-items: center;height: 100%;font-size: 3em;">
+                        $Terry
+                    </div>
+                    <div class="w-embed w-script">
+                        <style>
+                            iframe {
+                                width: 100%;
+                                height: 100%;
+                                display: block;
+                            }
+                        </style>
+                        <script src="../embed.cloudflarestream.com/embed/sdk.latest.js"></script>
+                        <!--  Your JavaScript code below -->
+                        <script>
+                            var Webflow = Webflow || [];
+                            Webflow.push(function () {
+                                const player = Stream(document.getElementById('main-video'));
+
+                                // Function to restart video
+                                function restartVideo() {
+                                    console.log('restartVideo');
+                                    console.log('restart');
+                                    player.currentTime = 0;
+                                    player.play();
+                                }
+
+                                //Function to toggle mute
+                                function toggleMute() {
+                                    console.log('toggleMute');
+                                    if (player.muted === void (0)) player.muted = true;
+                                    if (player.muted) {
+                                        // Unmuted
+                                        player.volume = 1;
+                                        player.muted = false;
+                                    } else {
+                                        // Muted
+                                        player.volume = 0;
+                                        player.muted = true;
+                                    }
+                                }
+
+                                // Toggle mute/unmute and overlay display on click of the video overlay
+                                $('#video-overlay').on("click", toggleMute);
+                                // Restart the video when the video overlay is clicked
+                                $('#video-overlay').on("click", restartVideo);
+                            });
+                        </script>
+                    </div>
+                    <div data-w-id="1becbed8-e700-1f47-2438-76f98d41ece8" style="opacity:1"
+                         class="hero_video_wrap">
+                        <div class="hero-video-wrapper">
+
+                            <div class="video-embed-hero w-embed w-iframe"
+                                 style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;">
+                                <iframe src="./images/daddaytatehero.mp4"
+                                        style="border: none; position: absolute; top: 0; left: 35%; width: 30%; height: 100%; object-fit: cover;"
+                                        allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+                                        allowfullscreen="true"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- / main end -->
+
+        <footer class="c-footer">
+
+            <div class="content">
+                © 2024 Terry.
+            </div>
+        </footer>
+
+</div>
+
+
+<!-- js -->
+<script src="./src/vendor/jquery-3.3.1.min.js"></script>
+<script src="./src/vendor/fancyapps/jquery.fancybox.min.js"></script>
+<script src="./src/vendor/slick.min.js"></script>
+<script src="./src/main.js"></script>
+</body>
+
+</html>
